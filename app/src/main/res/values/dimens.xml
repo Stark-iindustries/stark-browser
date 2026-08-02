@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_bar_height">60dp</dimen>
+    <dimen name="url_bar_height">40dp</dimen>
+    <dimen name="icon_button_size">44dp</dimen>
+    <dimen name="icon_size">22dp</dimen>
+    <dimen name="tab_card_corner_radius">12dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="find_bar_height">52dp</dimen>
+    <dimen name="progress_bar_height">3dp</dimen>
+    <dimen name="homepage_logo_size">64dp</dimen>
+    <dimen name="homepage_search_height">48dp</dimen>
+</resources>

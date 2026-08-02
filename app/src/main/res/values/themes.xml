@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.StarkBrowser" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/stark_primary</item>
+        <item name="colorPrimaryDark">@color/stark_primary_dark</item>
+        <item name="colorAccent">@color/stark_accent</item>
+        <item name="android:windowBackground">@color/surface_light</item>
+        <item name="android:statusBarColor">@color/surface_light</item>
+        <item name="android:navigationBarColor">@color/bar_background_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Theme.StarkBrowser.Incognito" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/stark_incognito_accent</item>
+        <item name="android:windowBackground">@color/stark_incognito</item>
+        <item name="android:statusBarColor">@color/stark_incognito</item>
+        <item name="android:navigationBarColor">@color/stark_incognito</item>
+    </style>
+
+    <style name="BottomBar" parent="">
+        <item name="android:background">@color/bar_background_light</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="UrlBarStyle" parent="Widget.Material3.TextInputEditText">
+        <item name="android:background">@drawable/url_bar_bg</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionGo</item>
+        <item name="android:inputType">textUri</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
+    <style name="BrowserButton" parent="Widget.Material3.Button.IconButton">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="TabCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <!-- General -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/general" android:padding="16dp" android:textSize="13sp"
+                android:textColor="@color/stark_primary" android:textStyle="bold" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchJavascript"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="@string/javascript_enabled" android:checked="true" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchCookies"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="@string/cookies_enabled" android:checked="true" />
+
+            <LinearLayout android:id="@+id/rowSearchEngine"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="@string/search_engine" android:textSize="15sp" />
+                <TextView android:id="@+id/tvSearchEngine"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Google" android:textColor="@color/stark_primary" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/rowHomepage"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="@string/homepage" android:textSize="15sp" />
+                <TextView android:id="@+id/tvHomepage"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/default_homepage" android:textColor="@color/stark_primary"
+                    android:maxWidth="160dp" android:maxLines="1" android:ellipsize="end" />
+            </LinearLayout>
+
+            <!-- Privacy -->
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/privacy" android:padding="16dp" android:textSize="13sp"
+                android:textColor="@color/stark_primary" android:textStyle="bold" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchContentBlocking"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="@string/content_blocking" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDoNotTrack"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="@string/do_not_track" />
+
+            <LinearLayout android:id="@+id/rowClearData"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/clear_data" android:textSize="15sp"
+                    android:textColor="@color/error_color" />
+            </LinearLayout>
+
+            <!-- Appearance -->
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/appearance" android:padding="16dp" android:textSize="13sp"
+                android:textColor="@color/stark_primary" android:textStyle="bold" />
+
+            <LinearLayout android:id="@+id/rowTheme"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="@string/theme" android:textSize="15sp" />
+                <TextView android:id="@+id/tvTheme"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/stark_primary" />
+            </LinearLayout>
+
+            <!-- Performance -->
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/performance" android:padding="16dp" android:textSize="13sp"
+                android:textColor="@color/stark_primary" android:textStyle="bold" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDataSaver"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:text="@string/data_saver" />
+
+            <!-- About -->
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant" android:layout_marginTop="8dp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/about" android:padding="16dp" android:textSize="13sp"
+                android:textColor="@color/stark_primary" android:textStyle="bold" />
+
+            <LinearLayout android:id="@+id/rowVersion"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="16dp" android:paddingEnd="16dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="@string/version" android:textSize="15sp" />
+                <TextView android:id="@+id/tvVersion"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

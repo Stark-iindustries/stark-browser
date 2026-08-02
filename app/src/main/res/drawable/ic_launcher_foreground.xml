@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- S letter for Stark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28 C42,28 34,35 34,44 C34,53 40,57 50,60 L58,63 C64,65 66,67 66,71 C66,75 62,78 54,78 C46,78 40,74 38,68 L30,72 C33,81 42,86 54,86 C67,86 75,79 75,70 C75,61 69,57 59,54 L51,51 C46,49 43,47 43,43 C43,39 47,36 54,36 C61,36 66,39 68,45 L76,41 C73,33 65,28 54,28 Z" />
+</vector>

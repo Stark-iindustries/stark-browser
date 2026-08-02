@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.StarkBrowser" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/stark_primary</item>
+        <item name="colorPrimaryDark">@color/stark_primary_dark</item>
+        <item name="colorAccent">@color/stark_accent</item>
+        <item name="android:windowBackground">@color/surface_dark</item>
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/bar_background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <style name="BottomBar" parent="">
+        <item name="android:background">@color/bar_background_dark</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+</resources>
