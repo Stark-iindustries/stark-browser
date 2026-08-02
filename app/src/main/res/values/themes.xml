@@ -24,7 +24,7 @@
         <item name="android:elevation">4dp</item>
     </style>
 
-    <style name="UrlBarStyle" parent="Widget.Material3.TextInputEditText">
+    <style name="UrlBarStyle" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/url_bar_bg</item>
         <item name="android:paddingStart">12dp</item>
         <item name="android:paddingEnd">12dp</item>
@@ -35,13 +35,13 @@
         <item name="android:selectAllOnFocus">true</item>
     </style>
 
-    <style name="BrowserButton" parent="Widget.Material3.Button.IconButton">
+    <style name="BrowserButton" parent="">
         <item name="android:layout_width">44dp</item>
         <item name="android:layout_height">44dp</item>
         <item name="android:padding">10dp</item>
     </style>
 
-    <style name="TabCardStyle" parent="Widget.Material3.CardView.Elevated">
+    <style name="TabCardStyle" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">12dp</item>
         <item name="cardElevation">2dp</item>
     </style>
