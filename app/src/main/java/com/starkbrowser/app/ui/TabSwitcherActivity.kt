@@ -167,8 +167,8 @@ class TabAdapter(
     override fun onBindViewHolder(holder: TabViewHolder, position: Int) {
         val tab = tabs[position]
         holder.title.text = tab.title.ifBlank { tab.url.ifBlank { "New Tab" } }
-        holder.incognitoBadge.isVisible = tab.isIncognito
-        holder.activeIndicator.isVisible = tab.isActive
+        holder.incognitoBadge.visibility = if (tab.isIncognito) View.VISIBLE else View.GONE
+        holder.activeIndicator.visibility = if (tab.isActive) View.VISIBLE else View.GONE
         holder.itemView.setOnClickListener { onTabClick(tab) }
         holder.closeBtn.setOnClickListener { onTabClose(tab) }
         if (tab.isActive) {
@@ -182,9 +182,4 @@ class TabAdapter(
 
     override fun getItemCount() = tabs.size
 
-    private val View.isVisible: Boolean
-        get() = visibility == View.VISIBLE
-    private var View.isVisible: Boolean
-        get() = visibility == View.VISIBLE
-        set(v) { visibility = if (v) View.VISIBLE else View.GONE }
 }

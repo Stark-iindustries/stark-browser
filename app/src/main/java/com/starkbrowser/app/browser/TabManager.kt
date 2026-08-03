@@ -17,6 +17,8 @@ class TabManager(private val context: Context) {
 
     companion object {
         private const val MAX_LIVE_WEBVIEWS = 5
+        const val DESKTOP_UA =
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
     // All tab metadata (lightweight)
@@ -269,8 +271,4 @@ class TabManager(private val context: Context) {
         </script></body></html>
     """.trimIndent()
 
-    companion object {
-        private const val DESKTOP_UA =
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
 }
