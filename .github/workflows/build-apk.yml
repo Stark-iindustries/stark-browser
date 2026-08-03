@@ -12,6 +12,8 @@ jobs:
   build:
     name: Build Debug APK
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -47,11 +49,11 @@ jobs:
 
       - name: Attach APK to Release
         if: github.event_name == 'release'
-        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: app/build/outputs/apk/debug/app-debug.apk
-          asset_name: StarkBrowser-${{ github.event.release.tag_name }}.apk
-          asset_content_type: application/vnd.android.package-archive
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" \
+            app/build/outputs/apk/debug/app-debug.apk \
+            --clobber \
+            --repo "${{ github.repository }}" \
+            --label "StarkBrowser-${{ github.event.release.tag_name }}.apk"
