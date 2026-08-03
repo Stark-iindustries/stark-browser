@@ -53,7 +53,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "${{ github.event.release.tag_name }}" \
-            app/build/outputs/apk/debug/app-debug.apk \
+            "app/build/outputs/apk/debug/app-debug.apk#StarkBrowser-${{ github.event.release.tag_name }}.apk" \
             --clobber \
-            --repo "${{ github.repository }}" \
-            --label "StarkBrowser-${{ github.event.release.tag_name }}.apk"
+            --repo "${{ github.repository }}"
